@@ -17,3 +17,9 @@ catch_your_things:
   description: tyt hyiny9 v rot ipal
   price: 23.99
   image_url: catch_your_things.png
+
+ruby:
+  title: Ruby On Rails
+  description: tyt hyiny9 v rot ipal
+  price: 23.99
+  image_url: catch_your_things.png
