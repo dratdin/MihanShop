@@ -3,14 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#time {
+		color: red;
+		left: 15px;
+		position: absolute;
+		bottom: 20px; 
+}
+
 .store {
-	h1 {
-		margin: 0;
-		padding-bottom: 0.5em;
-		font: 150% sans-serif;
-		color: #226;
-		border-bottom: 3px dotted #77d; 
-	}
 
 	.entry {
 		
@@ -46,6 +46,10 @@
 			color: #44a;
 			font-weight: bold;
 			margin-right: 3em;
+		}
+
+		form, div {
+			display: inline;
 		}
 	}
 }

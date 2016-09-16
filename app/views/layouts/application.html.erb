@@ -8,17 +8,20 @@
    <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-	<div id="banner">
+	<a id="banner" href="/">
 		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookself" %>
-	</div>
+		<%= @page_title || "Mihan ShoP" %>
+	</a>
 	<div id="columns">
 		<div id="side">
 			<ul>
-				<li><a href="">Home</a></li>
 				<li><a href="">FaQ</a></li>
 				<li><a href="">News</a></li>
-				<li><a href="">Contacts</a></li>
+				<li><a href="">Contacts</a></li><br>
+				<hr style=" 
+					color: white;
+				">
+				<li><a href="/products">Edit products</a></li>
 			</ul>
 		</div>
 		<div id="main">
