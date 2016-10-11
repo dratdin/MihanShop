@@ -1,0 +1,12 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Корзина</h2>
+<table>
+    <%= render(cart.line_items) %>
+    <div class="total_price"><%= @cart.total_price %></div>
+ </table>
+
+<%= button_to 'Очистить', @cart, method: :delete, remote: true,
+     data: { confirm: 'Вы уверены?' } %>   
