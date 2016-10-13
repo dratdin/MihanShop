@@ -74,7 +74,7 @@ body {
 		border-radius: 10px 0 0 10px;
 
 		#cart {
-			width: 70%;
+			width: 99%;
 			margin: 0 auto;
 			color: white;
 
@@ -91,16 +91,14 @@ body {
 
 			table {
 				border-top: 1px dotted;
-				border-bottom: 1px dotted;
 				border-color: pink;
-				margin-bottom: 10px;
+				width: 100%;
 				
-				tbody tr {
+				tr {
 					.item_quantity {
 						font-size:10px;
 						color: pink;
 					}
-					
 				}
 			}
 

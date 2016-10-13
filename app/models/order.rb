@@ -1,6 +1,10 @@
 class Order < ActiveRecord::Base
 	has_many :line_items, dependent: :destroy
-	PAYMENT_TYPES = [ "Check", "Credit card", "Purchase order" ]
+	has_many :payment_types
+	PAYMENT_TYPES = []
+	PaymentType.all.each do |type|
+		PAYMENT_TYPES << type.name
+	end
 	validates :name, :address, :email, presence: true
    	validates :pay_type, inclusion: PAYMENT_TYPES
 
