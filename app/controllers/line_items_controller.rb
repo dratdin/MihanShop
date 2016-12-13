@@ -60,13 +60,13 @@ class LineItemsController < ApplicationController
   def destroy
     @deleted_item = @line_item.id
     if @line_item.delete_line_item?
-      @line_item.destroy 
+      @line_item.destroy
     else
       @line_item.decrement_quantity!
     end
     @cart = Cart.find(session[:cart_id])
     respond_to do |format|
-      format.html { redirect_to store_url}
+      format.html { redirect_to line_items_path }
       format.js
       format.json { head :no_content }
     end

@@ -1,7 +1,7 @@
 <% if line_item == @current_item %>
-<tr id="current_item" class="<%= line_item.id %>">
+  <tr id="current_item" class="<%= line_item.id %>">
 <% else %>
-<tr class="<%= line_item.id %>">
+  <tr class="<%= line_item.id %>">
 <% end %>
      <td class="item_quantity">(<%= line_item.quantity %>)</td>
      <td><%= line_item.product.title %> </td>

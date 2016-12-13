@@ -19,8 +19,9 @@ class OrdersController < ApplicationController
     if @cart.line_items.empty?
       redirect_to store_url, notice: "Ваша корзина пуста!"
       return
+    else
+      @order = Order.new
     end
-    @order = Order.new
   end
 
   # GET /orders/1/edit
@@ -37,6 +38,10 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        # отправка почты
+        OrderNotification.received(@order).deliver
+        @order.ship_date = Date.current
+        @order.save!
         format.html { redirect_to store_url, notice: 'Спасибо за покупку!' }
         format.json { render :show, status: :created, location: @order }
       else
